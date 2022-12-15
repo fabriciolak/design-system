@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "lint": "turbo run lint eslint src/**/*.ts* --fix"
   },
   "devDependencies": {
     "turbo": "^1.6.3"
