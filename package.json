@@ -8,9 +8,13 @@
     "dev": "turbo run dev --parallel",
     "build": "turbo run build",
     "lint": "turbo run lint eslint src/**/*.ts* --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=@ignite-ui/docs && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "prettier": "^2.8.1",
     "turbo": "^1.6.3"
   }
