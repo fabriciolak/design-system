@@ -4,6 +4,7 @@ import * as react from 'react';
 import { ComponentProps, ElementType } from 'react';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
+import { ToastProps as ToastProps$1 } from '@radix-ui/react-toast';
 
 declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1689,4 +1690,10 @@ declare namespace MultiStep {
     var displayName: string;
 }
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
+interface ToastProps extends ToastProps$1 {
+    open: boolean;
+    setOpen: undefined;
+}
+declare function Toast({ open, setOpen, ...props }: ToastProps): JSX.Element;
+
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps };

@@ -19,6 +19,15 @@ module.exports = {
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/design-system/'
+
+      return {
+        ...config,
+        build: {
+          ...config.build,
+          sourcemap: false,
+          target: ['es2020'],
+        },
+      }
     }
     
     return config
