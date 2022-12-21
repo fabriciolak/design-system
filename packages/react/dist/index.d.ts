@@ -1,10 +1,11 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
 import * as react from 'react';
-import { ComponentProps, ElementType } from 'react';
+import { ComponentProps, ElementType, ReactNode } from 'react';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 import { ToastProps as ToastProps$1 } from '@radix-ui/react-toast';
+import { TooltipProps as TooltipProps$1 } from '@radix-ui/react-tooltip';
 
 declare const Box: _stitches_react_types_styled_component.StyledComponent<"div", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1696,4 +1697,10 @@ interface ToastProps extends ToastProps$1 {
 }
 declare function Toast({ open, setOpen, ...props }: ToastProps): JSX.Element;
 
-export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps };
+interface TooltipProps extends TooltipProps$1 {
+    children: ReactNode;
+    content: string;
+}
+declare function Tooltip({ children, content }: TooltipProps): JSX.Element;
+
+export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps, Toast, ToastProps, Tooltip, TooltipProps };

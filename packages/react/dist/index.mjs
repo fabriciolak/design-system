@@ -3036,11 +3036,11 @@ var require_react_jsx_runtime_development = __commonJS({
             return jsxWithValidation(type, props, key, false);
           }
         }
-        var jsx6 = jsxWithValidationDynamic;
-        var jsxs5 = jsxWithValidationStatic;
+        var jsx7 = jsxWithValidationDynamic;
+        var jsxs6 = jsxWithValidationStatic;
         exports.Fragment = REACT_FRAGMENT_TYPE;
-        exports.jsx = jsx6;
-        exports.jsxs = jsxs5;
+        exports.jsx = jsx7;
+        exports.jsxs = jsxs6;
       })();
     }
   }
@@ -3635,6 +3635,53 @@ function Toast2(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastViewport, {})
   ] });
 }
+
+// src/components/Tooltip/index.tsx
+import * as RadixTooltip from "@radix-ui/react-tooltip";
+
+// src/components/Tooltip/styles.ts
+import * as Tooltip from "@radix-ui/react-tooltip";
+var slideDownAndFade = keyframes({
+  "0%": { opacity: 0, transform: "translateY(-100px)" },
+  "100%": { opacity: 1, transform: "translateY(0)" }
+});
+var TooltipContent = styled(Tooltip.Content, {
+  borderRadius: 6,
+  padding: "$3 $4",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  letterSpacing: "-0.09px",
+  textAlign: "center",
+  lineHeight: "$short",
+  color: "$gray100",
+  backgroundColor: "$gray900",
+  boxShadow: "hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px",
+  userSelect: "none",
+  animationDuration: "400ms",
+  animationTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)",
+  willChange: "transform, opacity",
+  '&[data-state="delayed-open"]': {
+    '&[data-state="top"]': {
+      animationName: slideDownAndFade
+    }
+  }
+});
+var TooltipArrow = styled(Tooltip.Arrow, {
+  fill: "$black"
+});
+
+// src/components/Tooltip/index.tsx
+var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+function Tooltip2({ children, content }) {
+  return /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(RadixTooltip.Provider, { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(RadixTooltip.Root, { children: [
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(RadixTooltip.Trigger, { asChild: true, children }),
+    /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(RadixTooltip.Portal, { children: /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(TooltipContent, { sideOffset: 5, children: [
+      content,
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TooltipArrow, {})
+    ] }) })
+  ] }) });
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -3645,7 +3692,8 @@ export {
   Text,
   TextArea,
   TextInput,
-  Toast2 as Toast
+  Toast2 as Toast,
+  Tooltip2 as Tooltip
 };
 /**
  * @license React

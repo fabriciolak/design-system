@@ -1,5 +1,11 @@
 # @lak-ignite-ui/react
 
+## 2.2.0
+
+### Minor Changes
+
+- feat: Add new Tooltip component
+
 ## 2.1.2
 
 ### Patch Changes
