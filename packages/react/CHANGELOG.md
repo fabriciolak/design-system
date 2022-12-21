@@ -1,5 +1,11 @@
 # @lak-ignite-ui/react
 
+## 2.2.1
+
+### Patch Changes
+
+- fix(components/toast): remove width for adjust toast viewport
+
 ## 2.2.0
 
 ### Minor Changes

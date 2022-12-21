@@ -6,7 +6,6 @@ export const ToastViewport = styled(Toast.Viewport, {
   position: 'fixed',
   bottom: 0,
   right: 0,
-  width: 360,
   maxWidth: '100vw',
   zIndex: '999999',
   display: 'flex',
