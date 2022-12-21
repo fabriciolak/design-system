@@ -1,5 +1,11 @@
 # @lak-ignite-ui/react
 
+## 2.1.1
+
+### Patch Changes
+
+- Fix close button on Toast
+
 ## 2.1.0
 
 ### Minor Changes

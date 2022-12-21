@@ -3604,16 +3604,18 @@ var ToastDescription = styled(Toast.Description, {
   color: "$gray200"
 });
 var ToastAction = styled(Toast.Action, {
-  gridArea: "action",
+  gridArea: "action"
+});
+var ToastCloseButton = styled("button", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  background: "transparent",
-  cursor: "pointer",
   width: "$8",
   height: "$8",
   border: "none",
-  outline: "none"
+  outline: "none",
+  cursor: "pointer",
+  backgroundColor: "transparent"
 });
 
 // src/components/Toast/index.tsx
@@ -3624,7 +3626,7 @@ function Toast2(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(ToastRoot, __spreadProps(__spreadValues({ open }, props), { children: [
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastTitle, { children: "Agendamento realizado" }),
       /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastDescription, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("time", { children: "Ter\xE7a-feira, 20 de Dezembro \xE0s 20hs" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastAction, { asChild: true, altText: "Close toast", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(X, { size: 20, weight: "bold", color: "#A9A9B2" }) }) })
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastAction, { asChild: true, altText: "Close toast", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastCloseButton, { children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(X, { size: 20, weight: "bold", color: "#A9A9B2" }) }) })
     ] })),
     /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ToastViewport, {})
   ] });

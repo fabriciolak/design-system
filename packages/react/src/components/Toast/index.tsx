@@ -8,6 +8,7 @@ import {
   ToastDescription,
   ToastViewport,
   ToastAction,
+  ToastCloseButton,
 } from './styles'
 
 export interface ToastProps extends RadixToastProps {
@@ -25,9 +26,9 @@ export function Toast({ open, setOpen, ...props }: ToastProps) {
         </ToastDescription>
 
         <ToastAction asChild altText="Close toast">
-          <button>
+          <ToastCloseButton>
             <X size={20} weight="bold" color="#A9A9B2" />
-          </button>
+          </ToastCloseButton>
         </ToastAction>
       </ToastRoot>
 

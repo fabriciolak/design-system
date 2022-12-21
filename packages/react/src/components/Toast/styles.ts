@@ -92,13 +92,16 @@ export const ToastDescription = styled(Toast.Description, {
 
 export const ToastAction = styled(Toast.Action, {
   gridArea: 'action',
+})
+
+export const ToastCloseButton = styled('button', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: 'transparent',
-  cursor: 'pointer',
   width: '$8',
   height: '$8',
   border: 'none',
   outline: 'none',
+  cursor: 'pointer',
+  backgroundColor: 'transparent',
 })
