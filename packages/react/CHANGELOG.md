@@ -1,5 +1,11 @@
 # @lak-ignite-ui/react
 
+## 2.1.2
+
+### Patch Changes
+
+- fix: center close button
+
 ## 2.1.1
 
 ### Patch Changes
