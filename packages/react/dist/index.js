@@ -3629,7 +3629,8 @@ var ToastAction = styled(Toast.Action, {
   gridArea: "action"
 });
 var ToastCloseButton = styled("button", {
-  display: "flex",
+  position: "relative",
+  display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",
   width: "$8",
@@ -3637,7 +3638,10 @@ var ToastCloseButton = styled("button", {
   border: "none",
   outline: "none",
   cursor: "pointer",
-  backgroundColor: "transparent"
+  backgroundColor: "transparent",
+  svg: {
+    position: "absolute"
+  }
 });
 
 // src/components/Toast/index.tsx

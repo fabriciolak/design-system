@@ -95,7 +95,8 @@ export const ToastAction = styled(Toast.Action, {
 })
 
 export const ToastCloseButton = styled('button', {
-  display: 'flex',
+  position: 'relative',
+  display: 'inline-flex',
   justifyContent: 'center',
   alignItems: 'center',
   width: '$8',
@@ -104,4 +105,8 @@ export const ToastCloseButton = styled('button', {
   outline: 'none',
   cursor: 'pointer',
   backgroundColor: 'transparent',
+
+  svg: {
+    position: 'absolute',
+  },
 })
